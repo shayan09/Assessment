@@ -8,6 +8,8 @@ Dataset: It consists of two folders:
 Folder1: Human Images
 Folder2: Images of Dogs, Cats and Horses
 
+<img src="/imgs/data.jpg" width="250" height="150">
+
 Train Data: 360 images belonging to 2 classes.
 Test Data: 24 images belonging to 2 classes.
 
