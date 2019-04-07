@@ -33,3 +33,32 @@ Categorical Cross Entropy (log loss) is used as the problem has categorical data
 
 Step5:
 The model is then trained using fit_generator and the test accuracy is obtained using evaluate_generator.
+
+### Problem 2: Given an image, identify the dominant colors (hex code) eliminating the neutral colors (white, black and greys) using OpenCV.
+
+I have made use of K-Means Clustering to solve this problem.
+
+Step1:
+The images in loaded in opencv are in BGR format, the first thing done was to convert in to RGB. The parameters we have are 3D and we won't be needing rows and columns separately so it was merged and converted to a 2D matrix.
+
+Step2:
+Use the K-Means classifier and fit it to the image.
+
+Step3:
+Get a histogram for the clusters and then find the ratio/percentage probability of each cluster dominating the image.
+
+Step4:
+Choose the cluster of the centroid with maximum probability and obtain it's RGB value.
+
+Step5:
+Using thresholds, increase the value of the channel with maximum value and decrease the value of the channel with lowest value to get closer to the actual dominant color in the image. 
+
+Step6: 
+Convert the modified RGB to hex code and display it along with the color.
+
+###### Note: The number of clusters plays a crucial role in the solution.
+Ex: If the image of a green park with clear blue sky has two clusters, the output would be green as the dominant color.
+But if the number of clusters are 3, it would treat the shades of green as two different colors and blue would be the dominant color.
+
+<img src="/imgs/park_1.jpg" width="400" height="400"> <img src="/imgs/park_2.jpg" width="400" height="400">
+
