@@ -17,7 +17,7 @@ Load the VGG16 model and its weights when it was trained on the imagenet dataset
 Step2:
 We will need to fine tune the last few blocks of the model to cater to our problem. The orignal model has the last Max Pooliing layer of 1000 units which needs to be replaced by 2 in our case (binary classification). We modify the last few layers in the following manner:
 
---image
+<img src="/imgs/vgg16_1.jpg" width="500" height="200"> <img src="/imgs/vgg16_2.jpg" width="300" height="200">
 
 We use global average pooling (GAP) layers to minimize overfitting by reducing the total number of parameters in the model. However, GAP layers perform a more extreme type of dimensionality reduction, where a tensor with dimensions h×w×d is reduced in size to have dimensions 1×1×d. GAP layers reduce each h×w feature map to a single number by simply taking the average of all hw values.
 
@@ -27,7 +27,7 @@ We then freeze the layers of the VGG16 model that were unchanged as they do not 
 Step4: 
 Categorical Cross Entropy (log loss) is used as the problem has categorical data and cross entropy is used in when the model has to output between 0 and 1. A perfect model has a log loss of 0. Adam is used as the optimizer to compile the model.
 
---image
+<img src="/imgs/log_loss.jpg" width="200" height="200">
 
 Step5:
 The model is then trained using fit_generator and the test accuracy is obtained using evaluate_generator.
