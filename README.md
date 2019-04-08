@@ -56,7 +56,7 @@ Using thresholds, increase the value of the channel with maximum value and decre
 Step6: 
 Convert the modified RGB to hex code and display it along with the color.
 
-###### Note: The number of clusters plays a crucial role in the solution.
+###### Note: The number of clusters plays a crucial role in the solution. We can use R to load the data and using either Gap Statistic or Elbow method to find the optimal number of clusters for the given data.
 Ex: If the image of a green park with clear blue sky has two clusters, the output would be green as the dominant color.
 But if the number of clusters are 3, it would treat the shades of green as two different colors and blue would be the dominant color.
 
