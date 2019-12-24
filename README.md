@@ -1,6 +1,6 @@
-# Assessment
+## Assessment
 
-### Problem 1: Given a 256x256 image, write a binary classifier to differentiate the given image has a human or not. The approach and the code are more important than the accuracy rate. Please feel free to pick a relevant open dataset for this problem.
+#### Problem 1: Given a 256x256 image, write a binary classifier to differentiate the given image has a human or not. The approach and the code are more important than the accuracy rate. Please feel free to pick a relevant open dataset for this problem.
 
 I have made used of Transfer Learning using the VGG16 model for the purpose of this classification. The implementation has been done using Keras. 
 
@@ -34,7 +34,7 @@ Categorical Cross Entropy (log loss) is used as the problem has categorical data
 Step5:
 The model is then trained using fit_generator and the test accuracy is obtained using evaluate_generator.
 
-### Problem 2: Given an image, identify the dominant colors (hex code) eliminating the neutral colors (white, black and greys) using OpenCV.
+#### Problem 2: Given an image, identify the dominant colors (hex code) eliminating the neutral colors (white, black and greys) using OpenCV.
 
 I have made use of K-Means Clustering to solve this problem.
 
